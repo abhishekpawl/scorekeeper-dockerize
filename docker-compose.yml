@@ -3,9 +3,9 @@ services:
   scorekeeper:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ${DOCKERFILE_NAME}
       args:
         - APACHE_VERSION=${APACHE_VERSION}
-    image: 'abhishekpawl/scorekeeper'
+    image: '${IMAGE_NAME}'
     ports:
       - "${PORT}:80"

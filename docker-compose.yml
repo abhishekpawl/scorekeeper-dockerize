@@ -1,0 +1,11 @@
+version: '3'
+services:
+  scorekeeper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APACHE_VERSION=${APACHE_VERSION}
+    image: 'abhishekpawl/scorekeeper'
+    ports:
+      - "${PORT}:80"

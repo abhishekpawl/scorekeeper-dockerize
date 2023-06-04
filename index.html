@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ScoreKeeper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+      .container {
+        margin-top: 2rem;
+      }
+      .winner {
+        color: green;
+      }
+      .loser {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                ScoreKeeper
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <h1><span id="p1Display">0</span> - <span id="p2Display">0</span></h1>
+                <p>
+                  <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                </p>
+                Winning score:
+                <select name="" id="playto">
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item" type="button" id="p1Button">+1 Player 1</a>
+              <a href="#" class="card-footer-item" type="button" id="p2Button">+1 Player 2</a>
+              <a href="#" class="card-footer-item" type="button" id="reset">Reset</a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
